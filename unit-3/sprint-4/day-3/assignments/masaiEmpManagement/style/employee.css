@@ -1,0 +1,55 @@
+body{
+    background-color: teal;
+}
+nav{
+    font-size: 50px;
+    margin-left: 20px;
+}
+.card{
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+img{
+    border-radius:10px;
+    width: 100%;
+}
+.card_img{
+    margin-right: 20px;
+}
+.card_body{
+    margin-top : 10px;
+}
+.name{
+    color: gold;
+    font-family: sans-serif;
+    font-weight:550;
+}
+
+#filter {
+    margin-left: 15px;
+    border-radius: 3px;
+    width: 100px;
+    height: 25px;
+    background-color: gold;
+    
+    font-weight: bold;
+}
+#sort,#searchBtn{
+    border-radius: 3px;
+    border:none;
+    width: 55px;
+    height: 25px;
+    background-color: gold;
+    
+    font-weight: bold;
+}
+#searchInput{
+    height: 22px;
+    border-radius: 3px;
+    border:none;
+    margin-right: 5px;
+}

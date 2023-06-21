@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><img src="https://plus.unsplash.com/premium_photo-1665952050062-58041362d139?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="" srcset=""></h1>
+    <h2 id="likeHeading">0</h2>
+    <button id="like">Like</button>
+    <h2 id="dislikeHeading">0</h2>
+    <button id="dislike">Dislike</button>
+</body>
+<script>
+    let likeD = document.getElementById("likeHeading");
+    let dislikeD = document.getElementById("dislikeHeading");
+    let likebtn = document.getElementById("like");
+    let dislikebtn = document.getElementById("dislike");
+    let likeCount = localStorage.getItem("like");
+    let dislikeCount = localStorage.getItem("dislike");
+    console.log(likeCount)
+    if(likeCount == null){
+        likeCount=0;
+    }
+    if(dislikeCount == null){
+        dislikeCount = 0;
+    }
+    likeD.innerText = likeCount;
+    dislikeD.innerText = dislikeCount; 
+    likebtn.addEventListener("click",function(){
+        likeCount++;
+        localStorage.setItem("like",likeCount);
+        likeD.innerText = likeCount;
+    })
+    dislikebtn.addEventListener("click",function(){
+        dislikeCount++;
+        localStorage.setItem("dislike",dislikeCount);
+        dislikeD.innerText = dislikeCount;
+    })
+</script>
+</html>

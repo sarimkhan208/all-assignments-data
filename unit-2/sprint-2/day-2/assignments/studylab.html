@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" ccontent="IE=edge">
+    <meta name="viewport" ccontent="width=device-width, initial-scale=1.0">
+    <title>study-lab</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 40px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px ;
+        }
+        .ccontent{
+            display: flex;
+            width: 40%;
+            justify-content: space-evenly;
+            align-items: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .studylab{
+            background-color: #304FFE;
+            padding:0px 20px ;  
+            color: white;
+            font-family:sans-serif;
+        }
+        .cont{
+            width: 90%;
+            margin:50px auto  auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+        }
+        .first h2+p {
+            line-height: 25px;
+            color: gray;
+            font-family: sans-serif;
+        }
+        .first p{
+            color: #304FFE;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .first h2{
+            font-family: sans-serif;
+            font-size: 50px;
+        }
+        .bottom{
+            display: grid;
+            grid-template-columns: repeat(2,300px);
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            padding-right: 80px;
+            
+        }
+        .bottom img{
+            width: 150px;
+            height: 75px;
+        }
+        .second{
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 60px 30px;
+        }
+        .second > div{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .second > div > img{
+            width: 100px;
+            height: 100px;
+        }
+        .second h3{
+            font-family: sans-serif;
+        }
+        .second p {
+            font-family: sans-serif;
+            color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="studylab">
+            <h1>StudyLab</h1>
+        </div>
+        <div class="ccontent">
+            <div>Home</div>
+            <div>About</div>
+            <div>Course</div>
+            <div>Instructor</div>
+            <div>Blog</div>
+            <div>Contact</div>
+        </div>
+    </nav>
+    <div class="cont">
+        <div class="first">
+            <p>WELCOME TO STUDYLAB</p>
+            <h2>We StudyLab An online Learning Center</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt autem quidem iure tempora quis! Repudiandae cum, molestiae nobis obcaecati delectus quo deleniti, nulla esse nisi pariatur quae beatae est, quos mollitia similique facilis ea fugit enim. Eum cumque nobis sapiente, optio quam, fugiat dolores temporibus porro maiores eligendibr <br><br> sit dolorum aut quibusdam. Quam similique ea obcaecati. Ducimus consequuntur alias nemo, aliquid maxime, esse optio similique itaque nobis recusandae iure id ratione. Vel labore assumenda enim, molestiae voluptatum rem fuga qui voluptas unde maxime, fugiat suscipit ad molestias ea recusandae nemo magni. Alias quam hic animi minus excepturi debitis laboriosam quasi.</p>
+            <div class="bottom">
+                <div><img src="https://imgs.search.brave.com/e0uDWtnXdP-fpJVW1tM3wM9QmVuSA-iMgXeNwiflhnA/rs:fit:844:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5I/N1M1WUZTeTBfSFB5/cFlVal9PZWd3SGFF/SyZwaWQ9QXBp" alt=""></div>
+                <h3>Learn Anything from studyLab Watch video</h3>
+            </div>          
+        </div>
+        <div class="second">
+            <div>
+                <img src="https://imgs.search.brave.com/VcP4Ea83u4h06rCD6sw-XDKLwQygG_64qbgBer3OISA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/QkZpOGdPOUhUcDhh/VTl0OGNCSHpBSGFI/YSZwaWQ9QXBp" alt="">
+                <h3>Top Quality content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, explicabo?</p>
+            </div>
+
+            <div>
+                <img src="https://imgs.search.brave.com/VcP4Ea83u4h06rCD6sw-XDKLwQygG_64qbgBer3OISA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/QkZpOGdPOUhUcDhh/VTl0OGNCSHpBSGFI/YSZwaWQ9QXBp" alt="">
+                <h3>Top Quality content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, explicabo?</p>
+            </div>
+
+            <div>
+                <img src="https://imgs.search.brave.com/VcP4Ea83u4h06rCD6sw-XDKLwQygG_64qbgBer3OISA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/QkZpOGdPOUhUcDhh/VTl0OGNCSHpBSGFI/YSZwaWQ9QXBp" alt="">
+                <h3>Top Quality content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, explicabo?</p>
+            </div>
+
+            <div>
+                <img src="https://imgs.search.brave.com/VcP4Ea83u4h06rCD6sw-XDKLwQygG_64qbgBer3OISA/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC55/QkZpOGdPOUhUcDhh/VTl0OGNCSHpBSGFI/YSZwaWQ9QXBp" alt="">
+                <h3>Top Quality content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, explicabo?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export const BaseURL = 'https://stackoverflow-ami0.onrender.com'

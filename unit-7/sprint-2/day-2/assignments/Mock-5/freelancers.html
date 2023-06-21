@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancers</title>
+    <link rel="stylesheet" href="./style/freelancers.css">
+</head>
+<body>
+    <div id="navbar" >
+        <div>
+            <select id="sort" >
+                <option value="sort" >Sort By Hourly Rate</option>
+                <option  value="asc">Sort by Asc</option>
+                <option value="desc">Sort by Desc</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="filter" >
+                <option value="filterr" >Filter By Profession</option>
+                <option  value="Web Developer">Web Developer</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Student">Student</option>
+            </select>
+        </div>
+
+        <div>
+            <input id="search" type="text" />
+            <button id="searchBtn" >Search</button>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1>Freelancers List</h1>
+        </div>
+        <div id="editCont">
+            <h2>Edit Here</h2>
+            <input id="profession" type="text" placeholder="Edit Profession"/>
+            <input id="skills" type="text" placeholder="Edit Skills"/>
+            <input id="hour" type="text" placeholder="Edit Hourly rate"/>
+            <button id="editBtn" >Edit</button>
+        </div>
+
+        <div id="container" >
+            <!-- All Freelancers card here -->
+            
+        </div>
+    </div>
+</body>
+<script src="./script/freelancers.js" ></script>
+</html>

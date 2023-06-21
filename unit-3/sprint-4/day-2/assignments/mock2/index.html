@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css for Home page goes here  */
+      #menu-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      }
+      img{
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Web Coffee Shop Menu</h1>
+      <a href="./index.html">Home</a>
+      <a href="./order.html">Ordered</a>
+    </div>
+    <div id="filter">
+      <input type="number" id="lower" />
+      <input type="number" id="upper" />
+      <button id="filter-btn">Filter</button>
+    </div>
+    <select id="sort">
+      <option value="">Sort By Price</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <h1 id="alert"></h1>
+    <div id="menu-container">
+      <!-- Here Append All the Items  -->
+    </div>
+  </body>
+  <script>
+    // All your JS code for Home Page goes here
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-coffee`;
+    let container = document.getElementById("menu-container")
+    let anotherData = []
+    let filter = document.getElementById("filter-btn")
+    let sort = document.getElementById("sort")
+
+
+
+
+    window.addEventListener("load",()=>{fetchingData(url)})
+
+
+    // filter
+    filter.addEventListener("click",function(){
+      let lower = document.getElementById("lower").value
+      let upper = document.getElementById("upper").value
+      filter()
+      function filter(){
+        let filteredData = anotherData.filter(function(el){
+        if(el.price >= lower && el.price <= upper){
+          return true
+        }
+        else{
+          return false
+        }
+        })
+        displayDom(filteredData)
+      }
+    })
+
+
+
+    function fetchingData(url){
+      fetch(url)
+      .then(function(res){
+        return res.json()
+      })
+      .then(function(data){
+        console.log(data.data)
+        anotherData = data.data
+        displayDom(data.data)
+      })
+    }
+    
+    function displayDom(data){
+      container.innerHTML=null
+      let item = `
+                      ${data.map(function(el){return createCard(el.description,el.image,el.title,el.ingredients,el.price)}).join("")}
+                  `
+      container.innerHTML = item
+    }
+
+    function createCard(desc,image,title,ingredients,price){
+      let card = `<div class="card">
+                    <div>
+                      <img src=${image} alt="" srcset="">
+                    </div>
+                    <div class="card_body">
+                      <div>${desc}</div>
+                      <div>${title}</div>
+                      <div>${ingredients[0]}</div>
+                      <div>${price}</div>
+                      <button>Buy</button>
+                    </div>
+                  </div>`
+
+    return card
+    }
+
+
+
+    // sort
+    sort.addEventListener("change",function(){
+      console.log(sort.value)
+      let value = sort.value
+      if(value == "desc"){
+        fetchingData(`https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-coffee?sort=price&order=desc`)
+      }
+      else if(value == "asc"){
+        fetchingData("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-coffee?sort=price&order=asc")
+      }
+      else{
+        fetchingData(url)
+      }
+    })
+  </script>
+</html>
+
+<!-- <div class="card">
+  <div>
+    <img src="" alt="" srcset="">
+  </div>
+  <div class="card_body">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <button>Buy</button>
+  </div>
+</div> -->

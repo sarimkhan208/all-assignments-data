@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": true
+    },
+    {
+      "title": "gg",
+      "status": true,
+      "id": 2
+    },
+    {
+      "title": "ghfghf",
+      "status": true,
+      "id": 3
+    }
+  ]
+}

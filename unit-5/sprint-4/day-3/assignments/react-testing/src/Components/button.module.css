@@ -1,0 +1,25 @@
+.large{
+    width: 150px;
+    height: 50px;
+}
+
+.small{
+    width: 100px;
+    height: 20px;
+}
+
+.medium{
+    width: 125px;
+    height: 30px;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+.teal{
+    background-color: teal;
+}

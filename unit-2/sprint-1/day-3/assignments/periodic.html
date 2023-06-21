@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .head{
+            text-align: center;
+            font-size: 35px;
+            margin-top: 50px;
+        }
+        .table-body{
+            margin: 70px auto auto auto;
+            width: 70%;
+            height: 335px;
+            display: flex;
+        }
+        .col-1 ,.col-2 ,.col-3, .col-4-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18{
+            
+            width: 40px;
+            margin: 4px;
+        }
+        .r1, .r2, .r3, .r4, .r5, .r6, .r7{
+            
+            height: 40px;
+            margin:4px 0 4px  0;
+        }
+        .col-1 > .r2, .col-1 > .r3, .col-1 > .r4, .col-1 > .r5, .col-1 > .r6, .col-1 > .r7{
+            background-color: green;
+            border: 1px solid black;
+
+        }
+        .col-1 > .r1{
+            background-color: brown;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .col-2 > .r2, .col-2 > .r3, .col-2 > .r4, .col-2 > .r5, .col-2 > .r6, .col-2 > .r7{
+            background-color: rgb(245, 12, 51);
+            text-align: center;
+            border: 1px solid black;
+        }
+        .col-2 > .r1, .col-13 > .r1,.col-14 > .r1,.col-15 > .r1, .col-16 > .r1, .col-17 > .r1{
+            background-color: white;
+            
+        } 
+        .col-3 > .r1, .col-3 > .r2, .col-3 > .r3, .col-3 > .r4, .col-3 > .r5{
+            background-color: white;
+        }
+        .col-3 > .r6, .col-3 > .r7{
+            margin-top: 8px;
+            background-color: pink;
+            border: 1px solid black;
+        }
+        
+        .silicon-container{
+            /* border: 1px solid red; */
+            height: 138px;
+            width: 430px;
+        }
+        .silicon{
+            /* border: 1px solid red; */
+            margin: 4px;
+            width: 120px;
+            height: 90%;
+            background-color: green;
+            border: 1px solid black;
+            
+        }
+        .forteen{
+            text-align: right;
+            font-size:20px;
+            padding-right: 8px;
+        }
+        .Si{
+            margin-top: 15px;
+            margin-left: 10px;
+            font-size: 50px;
+        }
+        .silc{
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        .four-sixteen{
+            /* border: 1px solid red; */
+            height: 199px;
+            display: flex;
+            margin-top: 7px;
+        }
+        .col-4-12 > .r4, .col-4-12 > .r5, .col-4-12 > .r6, .col-4-12 > .r7{
+            background-color: blue;
+            border: 1px solid black;
+        } 
+        .col-13 > .r2, .col-14 > .r3, .col-14 > .r4, .col-15 > .r4, .col-15 > .r5, .col-16 > .r5,.col-16 > .r6{
+            background-color: blueviolet;
+            border: 1px solid black;
+        }
+        .col-13 > .r3, .col-13 > .r4, .col-13 > .r5, .col-13 > .r6, .col-14 > .r5, .col-14 > .r6, .col-15 > .r6{
+            background-color: orangered;
+            border: 1px solid black;
+        } 
+        .col-14 > .r2, .col-15 > .r2, .col-15 > .r3, .col-16 > .r2, .col-16 > .r3, .col-16 > .r4{
+            background-color: green;
+            border: 1px solid black;
+        } 
+        .col-17 > .r2, .col-17 > .r3, .col-17 > .r4, .col-17 > .r5, .col-17 > .r6{
+            background-color: rgb(238, 24, 59);
+            border: 1px solid black;
+        } 
+        .col-18 > .r1, .col-18 > .r2, .col-18 > .r3, .col-18 > .r4, .col-18 > .r5, .col-18 > .r6{
+            background-color: #FBC02D;
+            border: 1px solid black;
+        }
+        .col-13 > .r7, .col-14 > .r7, .col-15 > .r7, .col-16 > .r7, .col-17 > .r7, .col-18 > .r7{
+            background-color: #283593;
+            border: 1px solid black;
+        } 
+        .bottom-body{
+            margin-top: 30px;
+            height: 100px;
+           
+        }
+        .lath, .acto{
+            margin:auto;
+            width: 45%;
+            display: flex;
+            height: 40px;
+           
+        }
+        .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12, .c13, .c14{
+            
+            width: 40px;
+            margin: 1px;
+        }
+        .lath > .c1, .lath > .c2, .lath > .c3, .lath > .c4, .lath > .c5, .lath > .c6, .lath > .c7, .lath > .c8, .lath > .c9, .lath > .c10, .lath > .c11, .lath > .c12, .lath > .c13, .lath > .c14{
+            background-color: #1B5E20;
+        }
+        .acto > .c1, .acto > .c2, .acto > .c3, .acto > .c4, .acto > .c5, .acto > .c6, .acto > .c7, .acto > .c8, .acto > .c9, .acto > .c10, .acto > .c11, .acto > .c12, .acto > .c13, .acto > .c14{
+            background-color: #689F38;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="head">THE PERIODIC TABLE OF THE ELEMENTS</div>
+    <div class="table-body">
+        <div class="col-1">
+            <div class="r1">H</div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-2">
+            <div class="r1"></div>
+            <div class="r2">4</div>
+            <div class="r3">12</div>
+            <div class="r4">20</div>
+            <div class="r5">38</div>
+            <div class="r6">56</div>
+            <div class="r7">88</div>
+        </div>
+
+        <div class="col-3">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+        <div class="silicon-container">
+            <div class="silicon"><div class="forteen">14</div><div class="Si">Si</div><div class="silc">Silicon</div></div>
+            <div class="four-sixteen">
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+                <div class="col-4-12">
+                    <div class="r4"></div>
+                    <div class="r5"></div>
+                    <div class="r6"></div>
+                    <div class="r7"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-13">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-14">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-15">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-16">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-17">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+
+        <div class="col-18">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+        </div>
+    </div>
+
+    <div class="bottom-body">
+        <div class="lath">
+            <div class="c1">La</div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+            <div class="c7"></div>
+            <div class="c8"></div>
+            <div class="c9"></div>
+            <div class="c10"></div>
+            <div class="c11"></div>
+            <div class="c12"></div>
+            <div class="c13"></div>
+            <div class="c14"></div>
+        </div>
+        <div class="acto">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+            <div class="c5"></div>
+            <div class="c6"></div>
+            <div class="c7">Am</div>
+            <div class="c8"></div>
+            <div class="c9"></div>
+            <div class="c10"></div>
+            <div class="c11"></div>
+            <div class="c12"></div>
+            <div class="c13"></div>
+            <div class="c14">No</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .heading h1{
+            text-align: center;
+            color: teal;
+        }
+        .calulator-body{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding-top: 10px;
+            width: 25%;
+            height: 400px;
+            margin: auto;
+        }
+        .inside-body{
+            /* border: 1px solid red; */
+            width: 85%;
+            height: 300px;
+            margin: 50px auto 50px auto ;
+        }
+        .blank{
+            margin: auto auto 5px auto;
+            width: 93%;
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 8px;
+        } 
+        .content{
+            display: flex;
+        }
+        .content > div{
+            margin: 5px auto 5px auto;
+            width: 21%;
+            height: 55px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 8px;
+        }
+        .content > div{
+            text-align: center;
+        }
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+        .bg-red{
+            background-color: red;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Masai Calculator</h1>
+    </div>
+    <div class = "calulator-body">
+        <div class="inside-body">
+            <div class="blank"></div>
+            <div class="content">
+                <div><h3>1</h3></div>
+                <div><h3>2</h3></div>
+                <div><h3>3</h3></div>
+                <div class="bg-black"><h3>+</h3></div>
+            </div>
+
+            <div class="content">
+                <div><h3>4</h3></div>
+                <div><h3>5</h3></div>
+                <div><h3>6</h3></div>
+                <div class="bg-black"><h3>-</h3></div>
+            </div>
+
+            <div class="content">
+                <div><h3>7</h3></div>
+                <div><h3>8</h3></div>
+                <div><h3>9</h3></div>
+                <div class="bg-black"><h3>x</h3></div>
+            </div> 
+
+            <div class="content">
+                <div class="bg-red"><h3>C</h3></div>
+                <div><h3>0</h3></div>
+                <div class="bg-black"><h3>=</h3></div>
+                <div class="bg-black"><h3>/</h3></div>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>

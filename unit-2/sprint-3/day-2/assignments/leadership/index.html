@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Games</title>
+  </head>
+  <body>
+    <div id="min"></div>
+    <div id="max"></div>
+    <div id="score">
+    </div>
+    <div id="keypad">
+      <button class="btn">0</button>
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+    </div>
+    <button id="enter">ENTER</button>
+  </body>
+  <script>
+    
+    let min =document.getElementById("min");
+    let max =document.getElementById("max");
+    let score =document.getElementById("score");
+    let key =document.getElementsByClassName("btn");
+    let enter = document.getElementById("enter");
+    let output = "";
+    for(let i=0; i<key.length;i++){
+      key[i].addEventListener("click",function(e){
+        output += e.target.innerText
+        score.innerText = output;
+      });
+     function myfun(){
+      
+     }
+    }
+    enter.addEventListener("click",function(){
+      output = "";
+      if(min.innerText == "" || max.innerText == ""){
+        min.innerText = score.innerText;
+        max.innerText = score.innerText;
+      }
+      else if(Number(score.innerText) < Number(min.innerText)){
+        min.innerText = score.innerText;
+      }
+      else if(Number(score.innerText) > Number(max.innerText)){
+        max.innerText = score.innerText;
+      }
+    });
+  </script>
+</html>

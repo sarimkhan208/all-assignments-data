@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css for Home page goes here  */
+      #restaurant-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+      }
+      #restaurant-container img{
+        width: 100%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Restaurant Finder</h1>
+      <a href="./index.html">Home</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <select id="filter">
+      <option value="">Filter By Category</option>
+      <option value="cafe">cafe</option>
+      <option value="ethnic">ethnic</option>
+      <option value="fast_food">fast_food</option>
+    </select>
+    <h1 id="alert"></h1>
+    <div id="restaurant-container">
+      <!-- Here Append All the Products  -->
+    </div>
+  </body>
+  <script>
+    // const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/getrestaurants?limit=30`;
+    // All your JS code for Home Page goes here
+    let container = document.getElementById("restaurant-container")
+    let head = document.getElementById("alert")
+    let filterSelect = document.getElementById("filter")
+    let fetchdata = []
+    filterSelect.addEventListener("change",function(){
+      let filtereditem = fetchdata.filter(function(el,i){
+        if(filterSelect.value == el.type){
+          return true
+        }
+        else{
+          return false
+        }
+      })
+      DOM(filtereditem)
+    })
+    fetch("https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/getrestaurants?limit=30")
+    .then(function(res){
+      return res.json()
+    })
+    .then(function(res){
+      fetchdata = res.data
+      DOM(res.data)
+    })
+    .catch(function(err){
+      console.log(err)
+    })
+
+    function DOM(data){
+      container.innerHTML=null
+      data.forEach(function(element){
+        let card = document.createElement("div")
+        let image = document.createElement("img")
+        let name = document.createElement("h1")
+        let price = document.createElement("h2")
+        let type = document.createElement("p")
+        let rating = document.createElement("p")
+        let button = document.createElement("button")
+        image.setAttribute("src",element.image)
+        name.innerText = element.name
+        price.innerText = element.price_starts_from
+        type.innerText = element.type
+        rating.innerText = element.rating
+        button.innerText = "Favourites"
+
+        
+        button.addEventListener("click",function(){
+          let LS = JSON.parse(localStorage.getItem("favourites"))
+          if(LS == null){LS = []}
+          let alreadyExist = false;
+          for(let i=0; i<LS.length; i++){
+            if(LS[i].id == element.id){
+              alreadyExist = true
+              break
+            }
+          }
+          if(alreadyExist == true){
+            head.innerText = "Restaurant Already in Favourites"
+          }else{
+            LS.push(element)
+            localStorage.setItem("favourites",JSON.stringify(LS))
+            head.innerText = "Restaurant Added To Favourites"
+          }
+        })
+
+        card.append(image,name,price,type,rating,button)
+        container.append(card)
+      })
+    }
+  </script>
+</html>

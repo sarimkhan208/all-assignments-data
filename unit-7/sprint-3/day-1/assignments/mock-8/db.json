@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "username": "sarim",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "email": "sarim@gmail.com",
+      "password": "1",
+      "id": 1
+    },
+    {
+      "username": "yawer",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "email": "yaw@gmal.com",
+      "password": "1",
+      "id": 2
+    }
+  ],
+  "questions": [
+    {
+      "username": "sarim",
+      "title": "What is Card",
+      "description": "What is Card elaborate",
+      "language": "javascript",
+      "date": "2023-06-03T09:35:27.361Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 1
+    },
+    {
+      "username": "sarim",
+      "title": "What is Javascript",
+      "description": "What is Javascript",
+      "language": "javascript",
+      "date": "2023-06-03T09:35:46.274Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 2
+    },
+    {
+      "username": "sarim",
+      "title": "What isPython",
+      "description": "What is Python",
+      "language": "python",
+      "date": "2023-06-03T09:35:59.872Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 3
+    },
+    {
+      "username": "yawer",
+      "title": "What is Cors",
+      "description": "What is Cors",
+      "language": "javascript",
+      "date": "2023-06-03T09:40:49.472Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 4
+    },
+    {
+      "username": "yawer",
+      "title": "What is Tags",
+      "description": "What is Tags",
+      "language": "python",
+      "date": "2023-06-03T09:41:03.872Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 5
+    },
+    {
+      "username": "yawer",
+      "title": "What is Members",
+      "description": "What is Members",
+      "language": "python",
+      "date": "2023-06-03T09:41:13.009Z",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg",
+      "id": 6
+    }
+  ]
+}

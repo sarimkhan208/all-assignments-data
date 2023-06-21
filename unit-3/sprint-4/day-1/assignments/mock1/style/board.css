@@ -1,0 +1,12 @@
+.board{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width:900px) {
+    .board{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

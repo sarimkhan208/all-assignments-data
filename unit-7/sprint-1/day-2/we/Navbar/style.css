@@ -1,0 +1,38 @@
+#navbar{
+    background-color: brown;
+    color: aliceblue;
+    height: 50px;
+    padding: 1%;
+    display:grid;
+    grid-template-columns: 20% 80%;
+}
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.sidebar{
+    background-color: brown;
+    display: none;
+}
+.burger{
+    display: none;
+}
+
+@media (min-width:0px) and (max-width:500px){
+    .content{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    .sidebar{
+        display: block;
+    }
+
+}
+
+

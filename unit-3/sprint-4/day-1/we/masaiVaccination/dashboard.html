@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Web20-C4</title>
+    <link rel="stylesheet" href="/style/dashboard.css">
+  </head>
+  <body>
+    <nav>
+        <h2>Masai Vaccination</h2>
+        <a href="index.html">Registration</a>
+        <a href="dashboard.html">Dash Board</a>
+        <a href="vaccinated.html">Vaccinated</a>
+    </nav>
+    <select id="filter">
+      <option value="">Vaccine</option>
+      <option value="Covishield">Covishield</option>
+      <option value="Covaxin">Covaxin</option>
+      <option value="Sputnik">Sputnik</option>
+    </select>
+    <button id="sort">Sort by age</button>
+    <div id="container">
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Designation</th>
+                <th>Vaccine</th>
+                <th>Delete</th>
+                <th>Vaccinated</th>
+              </tr>
+            </thead>
+            <tbody>
+               <!-- Update the rows here using jsvascript -->
+            </tbody>
+        </table>
+    </div>
+  </body>
+  <script src="script/dashboard.js"></script>
+</html>

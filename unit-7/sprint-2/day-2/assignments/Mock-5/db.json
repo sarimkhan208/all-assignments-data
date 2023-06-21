@@ -1,0 +1,37 @@
+{
+  "freelancers": [
+    {
+      "name": "Rollins",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SQntNi68ASSiKFpRVzQOMfJCx5aYevH69w&usqp=CAU",
+      "email": "bob@gmail.com",
+      "password": "22",
+      "profession": "Web Developer",
+      "skills": "HTML",
+      "hourlyRate": 77,
+      "isBooked": false,
+      "id": 3
+    },
+    {
+      "name": "Bob",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SQntNi68ASSiKFpRVzQOMfJCx5aYevH69w&usqp=CAU",
+      "email": "bob@gmail.com",
+      "password": "22",
+      "profession": "Graphic Designer",
+      "skills": "HTML",
+      "hourlyRate": "83",
+      "isBooked": false,
+      "id": 1
+    },
+    {
+      "name": "Adre Tate",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5SQntNi68ASSiKFpRVzQOMfJCx5aYevH69w&usqp=CAU",
+      "email": "cobra@tate",
+      "password": "aaa",
+      "profession": "Student",
+      "skills": "HTML CSS JS",
+      "hourlyRate": "23",
+      "isBooked": false,
+      "id": 2
+    }
+  ]
+}

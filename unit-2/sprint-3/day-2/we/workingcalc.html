@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>working-calculator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container{
+            margin: auto;
+            width: 25%;
+            height: 443px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            grid-template-rows: repeat(4 , 80px);
+            padding: 50px 25px;
+            gap: 10px 10px;
+            border-radius: 10px;
+
+            
+        }
+        .container > div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .number:hover{
+            background-color: gray;
+            color: white;
+        }
+        #clear:hover{
+            background-color:#212121;
+        }
+        #plus:hover,#minus:hover,#equal:hover,#divide:hover{
+            background-color:#FF8F00;
+        }
+        #space{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .black{
+            background-color: black;
+            color: white;
+        }
+        .red{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="container">
+        <div id="space"></div>
+        <div class="number" >1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="black" id="plus">+</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="black" id="minus">-</div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+        <div class="black" id="mul">x</div>
+        <div class="red" id="clear">C</div>
+        <div class="number">0</div>
+        <div class="black" id="equal">=</div>
+        <div class="black" id="divide">/</div>
+    </div>
+</body>
+<script>
+    let disply = document.getElementById("space"); 
+    let number = document.getElementsByClassName("number");
+    let plus = document.getElementById("plus");
+    let minus = document.getElementById("minus");
+    let mul = document.getElementById("mul");
+    let divide = document.getElementById("divide");
+    let equal = document.getElementById("equal");
+    let clear = document.getElementById("clear");
+    let output = ""
+    let operator = ""
+    let myNum = [];
+    for(let i=0; i<number.length; i++){
+        number[i].addEventListener("click",(e)=>{
+            output += e.target.innerText
+            disply.innerText =  output;
+        })
+    }
+    plus.addEventListener("click",function (){
+        myNum.push(+output);
+        output = "";
+        disply.innerHTML = "";
+        operator = "plus"
+    })
+    minus.addEventListener("click",function(){
+        myNum.push(+output);
+        output="";
+        disply.innerHTML = "";
+        operator = "minus";
+    })
+    mul.addEventListener("click",function(){
+        myNum.push(+output);
+        output = "";
+        disply.innerHTML = ""
+        operator = "mul"
+    })
+    divide.addEventListener("click",function(){
+        myNum.push(+output);
+        output = ""
+        disply.innerHTML = "";
+        operator = "divide";
+    })
+    clear.addEventListener("click",function(){
+        disply.innerHTML = "";
+        output = "";
+        operator = "clear"
+    })
+    equal.addEventListener("click",function(){
+        myNum.push(+output);
+        output = ""
+        disply.innerHTML = "";
+        // console.log(myNum[0] ,myNum[1])
+        if(operator == "plus"){
+            disply.innerHTML = Number(myNum[0])+Number(myNum[1]);
+        }
+        else if(operator == "minus"){
+            disply.innerHTML = myNum[0] - myNum[1];
+        }
+        else if(operator == "mul"){
+            disply.innerHTML = myNum[0] * myNum[1];
+        }
+        else if(operator == "divide"){
+            disply.innerHTML = myNum[0] / myNum[1];
+        }
+        else if(operator == "clear"){
+            disply.innerHTML = "";
+            output = "";
+        }
+    })
+</script>
+</html>

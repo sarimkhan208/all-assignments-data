@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      #cart-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: (20px);
+      }
+      .classimg{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+  </body>
+  <script>
+    let container = document.getElementById("cart-container");
+    let total = document.getElementById("cart-total");
+    let LSogcart = JSON.parse(localStorage.getItem("cart"));
+    if(LSogcart == null){LSogcart=[]};
+    
+    function dispalyDOM(data){
+      container.innerHTML = null;
+      data.forEach(function(element,index){
+        let card = document.createElement("div");
+        let image = document.createElement("img");
+        image.setAttribute("src",element.img);
+        image.setAttribute("class","classimg");
+        let Brand = document.createElement("h2");
+        let Price = document.createElement("h3");
+        let Details = document.createElement("p");
+        let Category = document.createElement("p");
+        let inc = document.createElement("button");
+        inc.addEventListener("click",function(){
+          element.quantity++;
+          dispalyDOM(LSogcart)
+        })
+        let span = document.createElement("span");
+        let dec = document.createElement("button");
+        dec.addEventListener("click",function(){
+          element.quantity--;
+          dispalyDOM(LSogcart)
+        })
+        let remove = document.createElement("button");
+        remove.addEventListener("click",function(){
+          let deleted = LSogcart.filter(function(ele,i){
+            if(i==index){
+              return false;
+            }else{
+              return true;
+            }
+          })
+          console.log(deleted)
+          LSogcart = deleted;
+          localStorage.setItem("cart",JSON.stringify(deleted))
+          dispalyDOM(LSogcart)
+        })
+        Brand.innerText = element.brand;
+        Price.innerText = element.price;
+        Details.innerText = element.details;
+        Category.innerText = element.category;
+        inc.innerText = "+";
+        span.innerText = element.quantity;
+        dec.innerText = "-"
+        remove.innerText = "Remove";
+        
+        
+        card.append(image,Brand,Price,Details,Category,inc,span,dec,remove);
+        container.append(card)
+      })
+      let sum=0;
+      for(let i=0; i<LSogcart.length; i++){
+        sum+=(LSogcart[i].quantity * LSogcart[i].price)
+      }
+      total.innerText = sum;
+    }
+    dispalyDOM(LSogcart)
+  </script>
+</html>

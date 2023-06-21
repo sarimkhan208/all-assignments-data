@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function waitPromise(ms){
+        let promise = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                resolve("Promise resolved")
+            },ms)
+        })
+        return promise
+    }
+    let container = waitPromise(2000);
+   container.then(function(){
+    console.log(container)
+   })
+
+</script>
+</html>

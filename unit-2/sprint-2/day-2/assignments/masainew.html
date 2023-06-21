@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masai-news</title>
+    <style>
+        .container{
+            background-color: #ECEFF1;
+            height: 650px;
+        }
+        .container > h1{
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container > div{
+            
+            display: flex;
+            justify-content: space-around;
+        }
+        .container > div > div{
+            background-color: white;
+            width: 22%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .container img{
+            width: 100%;
+            height: 200px;
+            border-radius: 20px;
+        }
+        .container > div > div :nth-child(2){
+            color: blue;
+        } 
+        .container > div > div :nth-child(4){
+            color: grey;
+        } 
+        button{
+            display: block;
+            margin: 50px auto 10px auto;
+            background-color: #ECEFF1;
+            color: #E53E3E;
+            font-weight: bold;
+            height: 40px;
+            width: 120px;
+            border-radius: 8px;
+            border-color: #f07676;
+        }
+        .bottom h1{
+            margin-top: 80px;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .bottom > div{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bottom > div > div{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masai In The News</h1>
+        <div>
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="">
+                <p>21 Dec 2021</p>
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At suscipit amet aspernatur, perspiciatis laborum nulla.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/money_Control_c3e25f5ceb.png" alt="">
+                <p>21 Dec 2021</p>
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At suscipit amet aspernatur, perspiciatis laborum nulla.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div><img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/vccircle_6ef779c958.png" alt="">
+                <p>21 Dec 2021</p>
+                <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At suscipit amet aspernatur, perspiciatis laborum nulla.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <button>SEE MORE ></button>
+    </div>
+    <div class="bottom">
+        <h1>Our Investers, Who Believed in Us</h1>
+        <div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/unitus.svg" alt="">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/omidyar.svg" alt="">
+            </div>
+            <div>
+                <img src="https://www.masaischool.com/img/our-investors/indiaQuotient.svg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

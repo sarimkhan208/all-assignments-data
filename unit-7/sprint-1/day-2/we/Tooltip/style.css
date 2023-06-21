@@ -1,0 +1,27 @@
+
+
+
+#main{
+    width: 40%;
+    margin-left: 40%;
+}
+
+#button-divs{
+    display: flex;
+}
+.first{
+    margin-right: 20px;
+}
+
+.button-hover{
+    position: absolute;
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.first:hover .button-hover{
+    visibility: visible;
+}

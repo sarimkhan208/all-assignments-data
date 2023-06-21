@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-101 C2</title>
+    <style>
+      /* Write all necessery styles here  */
+      #top > div{
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+      #top img{
+        width: 100%;
+      }
+      #top > h1, #mid > h1,#bottom > h1 {
+        font-size: 50px;
+        text-align: center;
+        font-weight: bolder;
+      }
+      #top > h1+p ,#mid > h1+p, #bottom > h1+p{
+        margin-top: 0;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bolder;
+      }
+      #mid > div > div, #bottom > div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 18px;
+        width: 80%;
+        margin: auto;
+
+      }
+      #mid > div > div > div{
+        background-color: #455A64;
+        padding: 20px;
+        box-sizing: border-box;
+        color: white;
+        
+      }
+      #bottom,#bottom>div{
+        width: 90%;
+        margin: auto;
+      }
+      @media screen and (min-width:601px) and (max-width:800px){
+        #top > div{
+          flex-direction: column;
+        }
+        #mid > div > div, #bottom > div{
+          grid-template-columns: repeat(2,1fr);
+        }
+      }
+      @media screen and (min-width:250px) and (max-width:600px){
+        #top > div{
+          flex-direction: column;
+        }
+        #mid > div > div, #bottom > div{
+          grid-template-columns: repeat(1,1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top">
+        <h1>Trillo Workbench</h1>
+        <p>Server-side Low-code Platform</p>
+        <div>
+          <!-- Here should be one div for the text part and one image. Use flex to create the layout  -->
+          <div>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur minima assumenda</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequatur explicabo minus fugiat in aliquam numquam sed laboriosam possimus! Quisquam totam amet possimus? Ipsa cum optio quia obcaecati quas accusantium?</p>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempore facere voluptate dignissimos accusantium recusandae quis vel non, earum nihil qui quasi dolor officiis corporis! Obcaecati quasi magnam eos ipsum.</p>
+
+          </div>
+          <div>
+            <img src="https://www.trillo.io/wp-content/uploads/2022/04/trillo-Workbench-UI-Macbook.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div id="mid">
+        <h1>Trillo Applications</h1>
+        <p>
+          Trillo Applications are customizable end-to-end applications (Open
+          Source Code). The can be used out of the box or extended.
+        </p>
+        <div>
+          <!-- Here you should have 6 children divs. Use grid to create the layout -->
+          <div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+            <div>
+              <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-11-22/Screenshot%202022-11-22%20at%2012.29.09%20PM_869111.png" alt="">
+              <h3>Trillo Text Matching</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo tempora in nisi ullam laborum doloremque ex placeat ea, provident quos distinctio excepturi, eligendi, expedita est?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <h1>Use Cases</h1>
+        <p>
+          Trillo has readymade templates for several use cases that can be
+          customized quickly to deliver the solutions as per your requirements.
+          Some of these templates are described below.
+        </p>
+        <div>
+          <!-- Here you should have 6 children divs. Use grid to create the layout -->
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Data Warehouse</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, accusamus?</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

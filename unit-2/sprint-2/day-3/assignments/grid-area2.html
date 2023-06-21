@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-area2</title>
+    <style>
+        .container{
+            width: 55%;
+            margin: 100px auto auto auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2 , 150px);
+            gap: 15px 15px;
+            grid-template-areas:
+            "a a c d"
+            "e f c d";
+        }
+        div{
+            border-radius: 10px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        div :nth-child(1){
+            background-color: darkgray;
+            grid-area:a ;
+        }
+        div :nth-child(2){
+            background-color: darkgray;
+            grid-area:b ;
+        }
+        div :nth-child(3){
+            background-color: darkgray;
+            grid-area:c ;
+        }
+        div :nth-child(4){
+            background-color: darkgray;
+            grid-area:d ;
+        }
+        div :nth-child(5){
+            background-color: darkgray;
+            grid-area: e;
+        }
+        div :nth-child(6){
+            background-color: darkgray;
+            grid-area:f ;
+        }div :nth-child(7){
+            background-color: darkgray;
+            grid-area:g ;
+        }
+        div :nth-child(8){
+            background-color: darkgray;
+            grid-area:h ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>A</div>
+        <div></div>
+        <div>B</div>
+        <div>E</div>
+        <div>C</div>
+        <div>D</div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

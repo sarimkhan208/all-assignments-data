@@ -1,0 +1,6 @@
+nav{
+    height: 30px;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: space-around;
+}

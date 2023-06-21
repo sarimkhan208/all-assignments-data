@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Movie App</title>
+    <style>
+      /* Write necessery styles here  */
+    </style>
+  </head>
+  <body>
+    <div id="serach">
+      <input type="text" id="search-inp" placeholder="Search" />
+      <button id="search-btn">Search</button>
+    </div>
+    <div id="movie_container"></div>
+  </body>
+
+  <script>
+    let movie_container = document.getElementById("movie_container");
+    let input = document.getElementById("search-inp");
+    let btn = document.getElementById("search-btn");
+    btn.addEventListener("click",function(){
+      let searchthings = input.value;
+      fetchindata(searchthings);
+    })
+
+
+
+    function fetchindata(name){
+    let val = fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=6331da0e&s=${name}`)
+    val.then(function(res){
+      return res.json()
+    })
+    .then(function(data){
+      DOM(data.Search)
+      console.log(data.Search)
+    })
+    .catch(function(err){
+      console.log(err)
+    })
+    }
+    function DOM(domdata){
+      movie_container.innerHTML = null;
+      domdata.forEach(function(element){
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("src",element.Poster);
+        img.setAttribute("class","poster")
+        let title = document.createElement("h2");
+        title.setAttribute("class","title");
+        title.innerText = element.Title
+        card.append(img,title);
+        movie_container.append(card);
+      })
+    }
+  </script>
+</html>

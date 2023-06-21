@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Clock</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div>
+            <div><h1>Seconds</h1></div>
+            <div><h1 id="seconds">0</h1></div>
+        </div>
+        <div>
+            <div><h1>Minutes</h1></div>
+            <div><h1 id="minutes">0</h1></div>
+        </div>
+        <div>
+            <div><h1>Hour</h1></div>
+            <div><h1 id="hour">0</h1></div>
+        </div>
+    </div>
+    
+    
+</body>
+<script>
+    let sechd = document.getElementById("seconds");
+    let minhd = document.getElementById("minutes");
+    let hourhd = document.getElementById("hour");
+
+    let seconds = 0;
+    let minutes= 0;
+    let hour = 0;
+    setInterval(function(){
+        seconds++;
+        if(seconds==60){
+            seconds=0
+            minutes++;
+            if(minutes==60){
+                minutes=0;
+                hour++;
+                hourhd.innerText=hour;
+                if(hour==24){
+                    seconds=0;
+                    minutes=0;
+                    hour=0;
+                }
+            }
+            minhd.innerText=minutes;  
+        }
+        sechd.innerText = seconds;
+    },1000)
+</script>
+</html>

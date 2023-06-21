@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-101 C1</title>
+    <style>
+      /* Write all necessery css here  */
+      .main > img{
+        width: 100%;
+        height: 500px;
+      }
+      #content{
+        width: 82%;
+        margin: auto;
+      }
+      #content > h1{
+        text-align: center;
+      }
+      #content > p{
+        text-align: center;
+        line-height: 25px;
+      }
+      #products{
+        display: flex;
+        height: 450px;
+      }
+      #products > div{
+        width: 20%;
+        height: 70%;
+        margin: auto;
+      }
+      .inimg{
+        width:218px;
+        height: 180pxpx;
+      }
+       h3{
+        text-align: center;
+      }
+      h3 ~ p{
+        text-align: center;
+        font-weight: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Here you should put the image -->
+      <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-08/background_517708.png" alt="">
+      <div id="content">
+        <h1>Services</h1>
+        <p>
+          Why step out when you can get everything delivered home with the tap
+          of a button? Bangalore’s favourite delivery app gets you Food,
+          Grocery, Medicine, Pet Supplies, Fruits & Vegetables, Meat & Fish,
+          Health & Wellness, Gifts and Send Packages from one end of the city to
+          the other. From your local kirana stores to your favourite brands,
+          grocery shopping to your forgotten charger, we are always on the move
+          for you. Why worry about your chores, when you can get it all Dun!
+        </p>
+        <div id="products">
+          <!-- Here create 4 child divs and each child div should have box class -->
+          <div><img  class="inimg" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-08/product1_197594.png" alt=""><h3>Grocery & Essential</h3><p>Use our Grocery delievery service and get it delievery at your doorstep at few minutes.</p></div>
+          <div><img class="inimg" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-08/product2_241308.png" alt=""><h3>Pickup & Drop</h3><p>Use our pickup and drop services and get delievered at you doorsttep.</p></div>
+          <div><img  class="inimg" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-08/product3_857374.png" alt=""><h3>Restaurants</h3><p>Use restaurant services and get delievered at you doorsttep.t.</p></div>
+          <div><img class="inimg" src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-04-08/product4_514867.png" alt=""><h3>Fruits & Vegetable</h3><p>Use our grocery services and get delievered at you doorsttep..</p></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

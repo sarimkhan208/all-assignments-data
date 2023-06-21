@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourites Page</title>
+    <style>
+      /* All Your css for Favourites page goes here  */
+      #fav-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+      }
+      #fav-container img{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai Restaurant Finder</h1>
+      <a href="./index.html">Home</a>
+      <a href="./favourites.html">Favourites</a>
+    </div>
+    <h1 id="total">Your a total <span id="fav-total">0</span> </h1>
+    <div id="fav-container">
+      <!-- Here Append All the Favourites-->
+    </div>
+  </body>
+  <script>
+    // All your JS code for Favourites Page goes here
+    let container = document.getElementById("fav-container")
+    let total = document.getElementById("fav-total")
+    let LSfav = JSON.parse(localStorage.getItem("favourites"))
+    if(LSfav == null){LSfav = []}
+    function favDOM(data){
+      container.innerHTML=null
+      data.forEach(function(element,index){
+        let card = document.createElement("div")
+        let image = document.createElement("img")
+        let name = document.createElement("h1")
+        let price = document.createElement("h2")
+        let type = document.createElement("p")
+        let rating = document.createElement("p")
+        let button = document.createElement("button")
+        button.addEventListener("click",function(){
+          let deleted = LSfav.filter(function(el,i){
+            if(index == i){
+              return false
+            }
+            else{
+              return true
+            }
+          })
+          LSfav = deleted;
+          localStorage.setItem("favourites",JSON.stringify(deleted))
+          favDOM(deleted)
+        })
+        image.setAttribute("src",element.image)
+        name.innerText = element.name
+        price.innerText = element.price_starts_from
+        type.innerText = element.type
+        rating.innerText = element.rating
+        button.innerText = "Delete"
+        card.append(image,name,price,type,rating,button)
+        container.append(card)
+        total.innerText = data.length
+      })
+    }
+    favDOM(LSfav)
+  </script>
+</html>

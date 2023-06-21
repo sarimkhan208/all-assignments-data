@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shirt/a/6/l/m-fmshto0961-flying-machine-original-imagggrefznhg7ye.jpeg?q=70",
+      "title": "Refular Fit 1",
+      "price": 500,
+      "brand": "FLYING MACHINE",
+      "discount": "5",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/l44hyfk0/shirt/u/m/d/m-fmsht0553-flying-machine-original-imagf3csnatpmdns.jpeg?q=70",
+      "title": "mid Fit",
+      "price": 600,
+      "brand": "Montecarlo",
+      "discount": "4",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/l41n2q80/shirt/6/t/k/xl-fmshto0504-flying-machine-original-imagffhgry3mbn8q.jpeg?q=70",
+      "title": 600,
+      "price": "1006",
+      "brand": "FLYING MACHINE",
+      "discount": "6",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/sari/o/m/g/free-bfgrt145-surat4fashion-unstitched-original-imaghv4wu2nkjkss.jpeg?q=70",
+      "title": "beadt",
+      "price": 1500,
+      "brand": "puma",
+      "discount": "4",
+      "gender": "female",
+      "id": 4
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/ky7lci80/fabric/z/d/n/yes-2-m-unstitched-2-2-m-inithi-1438-black-inithi-original-imagagyryrqazqtw.jpeg?q=70",
+      "title": "man in cals",
+      "price": 2000,
+      "brand": "reebok",
+      "discount": "10",
+      "gender": "female",
+      "id": 5
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/kxuqdu80/fabric/l/s/5/yes-2-m-unstitched-2-2-m-fkrt-1463-45-inithi-original-imaga7sbhwjbtvcq.jpeg?q=70",
+      "title": "god 1",
+      "price": 1100,
+      "brand": "FLYING MACHINE",
+      "discount": "20",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/kgv5x8w0-0/kurta/x/1/r/xxl-gw104-3-glowworld-original-imafwzhfaubzfzuf.jpeg?q=70",
+      "title": "hacker",
+      "price": 1200,
+      "brand": "FLYING MACHINE",
+      "discount": "20",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/kids-dress/d/q/p/6-7-years-d-w-035-pamberston-original-imagk6nfv3xh3hee.jpeg?q=70",
+      "title": "promax",
+      "price": 1000,
+      "brand": "adidas",
+      "discount": "6",
+      "gender": "kids",
+      "id": 8
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/kids-dress/d/q/p/6-7-years-d-w-035-pamberston-original-imagk6nfv3xh3hee.jpeg?q=70",
+      "title": "14 dram",
+      "price": 2000,
+      "brand": "reebok",
+      "discount": "4",
+      "gender": "kids",
+      "id": 9
+    },
+    {
+      "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/kids-dress/w/z/h/3-4-years-cpgl0048-black-chandrika-original-imafwmywhzxxzs53-bb.jpeg?q=70",
+      "title": "tim tim tim",
+      "price": "21000",
+      "brand": "Black berry",
+      "discount": "1.2",
+      "gender": "male",
+      "id": 10
+    }
+  ]
+}

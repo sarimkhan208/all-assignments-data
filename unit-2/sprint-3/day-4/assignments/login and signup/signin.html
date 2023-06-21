@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in Page</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="./index.html">Signup</a>
+      <a href="./signin.html">Signin</a>
+    </div>
+    <div id="signin">
+      <h1 id="heading">Please Enter Your Details</h1>
+      <form>
+        <input type="email" id="email" />
+        <input type="password" id="password" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    let myForm = document.querySelector("form");
+    let heading = document.getElementById("heading");
+    let ogCred = JSON.parse(localStorage.getItem("account-data"))
+    myForm.addEventListener("submit",function(e){
+      e.preventDefault();
+      let applyobj = {
+        email : myForm.email.value,
+        password : myForm.password.value
+      }
+      let flag = false;
+      ogCred.forEach(function(ele,index){
+        if(ele.email === applyobj.email && ele.password === applyobj.password){
+          heading.innerText = "Sign in Successful"
+          flag = true;
+        }
+      })
+      if(flag == false){
+        heading.innerText = "Wrong Credentials"
+      }
+    })
+    
+  </script>
+</html>

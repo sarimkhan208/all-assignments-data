@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Movie App</title>
+    <style>
+      #movie_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="serach">
+      <input type="text" id="search-inp" placeholder="Search" />
+      <button id="search-btn" >Search</button>
+    </div>
+    <div id="movie_container"></div>
+
+
+
+    <!-- <input type="text" placeholder="Search" id="search-inp">
+    <button id="search-btn">Search</button>
+    <div id="movie_container"></div> -->
+  </body>
+  <script>
+    let movie_container = document.getElementById("movie_container");
+    let input = document.getElementById("search-inp")
+    let button = document.getElementById("search-btn")
+    button.addEventListener("click",function(){
+      let name = input.value
+      fetching(name)
+    })
+
+   function fetching(name){
+    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=6331da0e&s=${name}`)
+    .then((res)=>res.json())
+    .then((data)=>DOM(data.Search))
+    .catch((err)=>console.log(err))
+   }
+    function DOM(data){
+      movie_container.innerHTML=null
+      if(data == undefined){
+        let error = document.createElement("h2");
+        error.setAttribute("class","error-container")
+        error.innerText = "Movie not found!"
+        movie_container.append(error)
+
+      }
+      data.forEach(function(element){
+        let card = document.createElement("div")
+        let image = document.createElement("img");
+        image.setAttribute("src",element.Poster)
+        image.setAttribute("class","poster")
+        let name = document.createElement("h2");
+        name.setAttribute("class","title");
+        name.innerText = element.Title
+        card.append(image,name);
+        movie_container.append(card);
+      })
+    }
+  </script>
+</html>

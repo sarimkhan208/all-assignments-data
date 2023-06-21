@@ -1,0 +1,46 @@
+{
+     "data" : [
+        {
+            "image" : "https://thumbs.dreamstime.com/b/iron-man-17900674.jpg",
+            "name" : "Iron Man",
+            "power":"Rich",
+            "city":"UK"
+        },
+        {
+            "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHxdgjAedGbgk7FSdYuXpc8eGgPCS0CuIj1GYS-oCW&s",
+            "name" : "Captain America",
+            "power":"Wealthy",
+            "city":"United State"
+        },
+        {
+            "image" : "https://i.pinimg.com/236x/2c/3f/d7/2c3fd77862947349f29dc9a08d66ce7f.jpg",
+            "name" : "Thor",
+            "power":"God",
+            "city":"Asgard"
+        },
+        {
+            "image" : "https://wallpapers.com/images/featured/tzhfez1w8ud2z8aw.jpg",
+            "name" : "Deadpool",
+            "power":"unlimited",
+            "city":"India"
+        },
+        {
+            "image" : "https://images.unsplash.com/photo-1635805737707-575885ab0820?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3BpZGVybWFufGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+            "name" : "Spider man",
+            "power":"web",
+            "city":"United State"
+        },
+        {
+            "image" : "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2017%2F07%2F000260895hr-2000.jpg&q=60",
+            "name" : "Black Panther",
+           "power":"Ultimate",
+            "city":"Wakanda"
+        },
+        {
+            "image" : "https://thumbs.dreamstime.com/b/complete-statue-hulk-superhero-disney-paris-image-represents-photographed-was-spot-perfect-exposure-cropped-144406738.jpg",
+            "name" : "Hulk",
+            "power":"Power",
+            "city":"Weelly"
+        }
+    ]
+}

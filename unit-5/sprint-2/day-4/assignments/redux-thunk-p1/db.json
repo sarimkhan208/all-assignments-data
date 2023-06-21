@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "coding",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "assignment",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "chilling",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "gaming",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "fill",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "sdfsf",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "fdsf",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "hoo ja bhai",
+      "status": false,
+      "id": 9
+    },
+    {
+      "title": "shukriya",
+      "status": false,
+      "id": 10
+    }
+  ]
+}
